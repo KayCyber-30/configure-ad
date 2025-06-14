@@ -33,7 +33,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Create a Domain Admin user within the domain
 - Join Client1 to your domain(my-domain.com)
 - Set up Remote Desktop for non-administrative users on Client-1
-- Create a bunch of additional users and attempt to log into client-1 with one of the users
+- Create a bunch of additional users and attempt to log into client-1 with one of the users using powershell
+- When done, open ADCU and observe the accounts in the approrpriate OU and attempt to login into Client-1 with one of the accounts
 <h2>Deployment and Configuration Steps</h2>
 
 - Set up Domain Controller in Azure
@@ -81,26 +82,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 ![image](https://github.com/user-attachments/assets/c3e53b5f-3133-4d77-a629-0a990fefb01e)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+- Set up Remote Desktop for non-administrative users on Client-1
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+![image](https://github.com/user-attachments/assets/2b0c6857-588f-40ae-a0c0-dd1eea7f7731)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+- Create a bunch of additional users and attempt to log into client-1 with one of the users using powershell
+
+![image](https://github.com/user-attachments/assets/c530c203-8fb1-4878-8126-b04d0a57cf56)
+
+- When done, open ADCU and observe the accounts in the approrpriate OU and attempt to login into Client-1 with one of the accounts
+
+![image](https://github.com/user-attachments/assets/72649e75-57ed-4aa5-bfd3-d70ea0afb30f)
+
+
