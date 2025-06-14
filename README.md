@@ -28,7 +28,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
 - Attempt to ping DC-1’s private IP address and ensure the ping succeeded
 - From Client-1, open PowerShell and run ipconfig /all and the output for the DNS settings should show Dc-1's private IP Address
-- Install Active Directory
+- Install Active Directory on DC-1
+- Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
 - Create a Domain Admin user within the domain
 - Join Client1 to your domain(my-domain.com)
 - Set up Remote Desktop for non-administrative users on Client-1
@@ -64,7 +65,22 @@ This tutorial outlines the implementation of on-premises Active Directory within
   ![image](https://github.com/user-attachments/assets/0e9e62a8-956f-4675-8895-fc7064ff2966)
 
 
-Install Active Directory
+- Install Active Directory on DC-1
+
+![image](https://github.com/user-attachments/assets/3d652e65-5c06-4af8-841e-057ac4d28e95)
+
+- Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+
+![image](https://github.com/user-attachments/assets/5581543a-ef78-453b-bd4e-3b1916913f63)
+
+- Create a Domain Admin user within the domain:
+
+  ![image](https://github.com/user-attachments/assets/aefd18b9-dfd7-41ff-8b2f-3307725c31e0)
+
+-  Join Client1 to your domain(my-domain.com)
+  
+![image](https://github.com/user-attachments/assets/c3e53b5f-3133-4d77-a629-0a990fefb01e)
+
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
