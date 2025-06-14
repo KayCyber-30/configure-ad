@@ -24,6 +24,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Set up Domain Controller in Azure
 - Set up Client-1 in Azure
 - After VM is created, set Domain Controller’s NIC Private IP address to be static
+- Log into the VM and disable the Windows Firewall (for testing connectivity)
+- After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
+- Attempt to ping DC-1’s private IP address and ensure the ping succeeded
+- From Client-1, open PowerShell and run ipconfig /all and the output for the DNS settings should show Dc-1's private IP Address
 - Install Active Directory
 - Create a Domain Admin user within the domain
 - Join Client1 to your domain(my-domain.com)
@@ -44,6 +48,23 @@ After VM is created, set Domain Controller’s NIC Private IP address to be stat
 
 ![image](https://github.com/user-attachments/assets/9763434e-60c4-4325-97a8-dcde1ae4430b)
 
+Log into the VM and disable the Windows Firewall (for testing connectivity)
+
+![image](https://github.com/user-attachments/assets/65d6e708-7ca2-4079-b425-8cc33ee75cd9)
+
+- After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
+
+![image](https://github.com/user-attachments/assets/93151955-2e36-44ee-9f7e-2bfdc94b55ae)
+
+- Attempt to ping DC-1’s private IP address and ensure the ping succeeded
+
+- ![image](https://github.com/user-attachments/assets/c4d008c0-4889-42da-bcd9-c72da1342f49)
+
+- From Client-1, open PowerShell and run ipconfig /all and the output for the DNS settings should show Dc-1's private IP Address
+
+- ![image](https://github.com/user-attachments/assets/0e9e62a8-956f-4675-8895-fc7064ff2966)
+
+- 
 Install Active Directory
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
