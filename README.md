@@ -21,76 +21,95 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Set up Domain Controller in Azure
-- Set up Client-1 in Azure
-- After VM is created, set Domain Controller’s NIC Private IP address to be static
-- Log into the VM and disable the Windows Firewall (for testing connectivity)
-- After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
-- Attempt to ping DC-1’s private IP address and ensure the ping succeeded
-- From Client-1, open PowerShell and run ipconfig /all and the output for the DNS settings should show Dc-1's private IP Address
-- Install Active Directory on DC-1
-- Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
-- Create a Domain Admin user within the domain
-- Join Client1 to your domain(my-domain.com)
-- Set up Remote Desktop for non-administrative users on Client-1
-- Create a bunch of additional users and attempt to log into client-1 with one of the users using powershell
-- When done, open ADCU and observe the accounts in the approrpriate OU and attempt to login into Client-1 with one of the accounts
+- Deploy a Domain Controller (DC-1) in Azure
+ 
+- Deploy a client machine (Client-1) in Azure
+
+- Assign a static private IP address to DC-1's network interface (in Azure portal)
+
+- Log into DC-1 and temporarily disable Windows Firewall (for connectivity testing only)
+
+- Set Client-1’s DNS server address to DC-1’s private IP address (via Azure VM settings or within Windows)
+
+- Verify network connectivity from Client-1 to DC-1 by pinging DC-1’s private IP
+
+- On Client-1, run ipconfig /all in PowerShell to confirm that the DNS server is correctly set to DC-1’s IP
+
+- Install the Active Directory Domain Services (AD DS) role on DC-1
+
+- Promote DC-1 to a Domain Controller, creating a new forest and domain (e.g., mydomain.com)
+
+- Create a new Domain Admin user within the mydomain.com domain using Active Directory Users and Computers (ADUC)
+
+- Join Client-1 to the domain (e.g., mydomain.com)
+
+- Configure Remote Desktop access on Client-1 for non-administrative domain users (add users to the Remote Desktop Users group)
+
+- Create additional domain users using PowerShell or ADUC
+
+- Test domain user logins by signing into Client-1 with one of the new user accounts
+
+- In Active Directory Users and Computers, verify that the new accounts exist in the appropriate Organizational Units (OUs)
+
 <h2>Deployment and Configuration Steps</h2>
 
-- Set up Domain Controller in Azure
+- Deploy a Domain Controller (DC-1) in Azure
 
 ![image](https://github.com/user-attachments/assets/06f81fe6-fa82-480f-bf53-6103d4f5ac2b)
 
-- Set up Client-1 in Azure
-
+- Deploy a client machine (Client-1) in Azure
+  
 ![image](https://github.com/user-attachments/assets/7040c6e5-6e03-48f0-9cd5-7e2048665201)
 
-- After VM is created, set Domain Controller’s NIC Private IP address to be static
-
+- Assign a static private IP address to DC-1's network interface (in Azure portal)
+  
 ![image](https://github.com/user-attachments/assets/9763434e-60c4-4325-97a8-dcde1ae4430b)
 
-- Log into the VM and disable the Windows Firewall (for testing connectivity)
-
+- Log into DC-1 and temporarily disable Windows Firewall (for connectivity testing only)
+  
 ![image](https://github.com/user-attachments/assets/65d6e708-7ca2-4079-b425-8cc33ee75cd9)
 
-- After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
-
+- Set Client-1’s DNS server address to DC-1’s private IP address (via Azure VM settings or within Windows)
+  
 ![image](https://github.com/user-attachments/assets/93151955-2e36-44ee-9f7e-2bfdc94b55ae)
 
-- Attempt to ping DC-1’s private IP address and ensure the ping succeeded
+- Verify network connectivity from Client-1 to DC-1 by pinging DC-1’s private IP
 
  ![image](https://github.com/user-attachments/assets/c4d008c0-4889-42da-bcd9-c72da1342f49)
   
-- From Client-1, open PowerShell and run ipconfig /all and the output for the DNS settings should show Dc-1's private IP Address
-
+- On Client-1, run ipconfig /all in PowerShell to confirm that the DNS server is correctly set to DC-1’s IP
+  
   ![image](https://github.com/user-attachments/assets/0e9e62a8-956f-4675-8895-fc7064ff2966)
 
 
-- Install Active Directory on DC-1
+- Install the Active Directory Domain Services (AD DS) role on DC-1
 
 ![image](https://github.com/user-attachments/assets/3d652e65-5c06-4af8-841e-057ac4d28e95)
 
-- Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+- Promote DC-1 to a Domain Controller, creating a new forest and domain (e.g., mydomain.com)
 
 ![image](https://github.com/user-attachments/assets/5581543a-ef78-453b-bd4e-3b1916913f63)
 
-- Create a Domain Admin user within the domain:
-
+- Create a new Domain Admin user within the mydomain.com domain using Active Directory Users and Computers (ADUC)
+  
   ![image](https://github.com/user-attachments/assets/aefd18b9-dfd7-41ff-8b2f-3307725c31e0)
 
--  Join Client1 to your domain(my-domain.com)
+-  Join Client-1 to the domain (e.g., mydomain.com)
   
 ![image](https://github.com/user-attachments/assets/c3e53b5f-3133-4d77-a629-0a990fefb01e)
 
-- Set up Remote Desktop for non-administrative users on Client-1
+- Configure Remote Desktop access on Client-1 for non-administrative domain users (add users to the Remote Desktop Users group)
 
 ![image](https://github.com/user-attachments/assets/2b0c6857-588f-40ae-a0c0-dd1eea7f7731)
 
-- Create a bunch of additional users and attempt to log into client-1 with one of the users using powershell
+- Create additional domain users using PowerShell or ADUC
 
 ![image](https://github.com/user-attachments/assets/c530c203-8fb1-4878-8126-b04d0a57cf56)
 
-- When done, open ADCU and observe the accounts in the approrpriate OU and attempt to login into Client-1 with one of the accounts
+- Test domain user logins by signing into Client-1 with one of the new user accounts;
+
+In Active Directory Users and Computers, verify that the new accounts exist in the appropriate Organizational Units (OUs)
+
 
 ![image](https://github.com/user-attachments/assets/72649e75-57ed-4aa5-bfd3-d70ea0afb30f)
 
